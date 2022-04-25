@@ -149,6 +149,7 @@ public class MemberDao {
 	}
 	
 	public MemberDto getMemberInfo(String id) {
+		//System.out.println(id);
 		
 		MemberDto dto = null;
 		
@@ -167,6 +168,7 @@ public class MemberDao {
 			
 			if(rs.next()) {//조건이 참이면 DB에 입력된 아이디가 존재함
 				
+				dto = new MemberDto();
 				//DB에 저장되어 있던 해당 아이디의 데이터 가져오기
 				String dbId = rs.getString("id");
 				String dbPw = rs.getString("pw");
