@@ -39,7 +39,7 @@
 			String pname = dto.getName();
 			session.setAttribute("name", pname);
 			session.setAttribute("validMem", "yes");
-			
+			response.sendRedirect("main.jsp");
 		}
 	%>
 </body>
